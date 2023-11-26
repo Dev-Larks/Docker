@@ -38,18 +38,8 @@ RUN apt-get -y install git \
     libgdbm6 \
     libgdbm-dev \
     libdb-dev \
-    apt-utils \
-    wget \
-    libicu70
+    apt-utils
 
-# "#################################################"
-# Install PowerShell 7
-# Based on: https://learn.microsoft.com/en-us/powershell/scripting/install/install-ubuntu?view=powershell-7.4
-RUN wget https://github.com/PowerShell/PowerShell/releases/download/v7.4.0/powershell_7.4.0-1.deb_amd64.deb \
-  && dpkg -i powershell_7.4.0-1.deb_amd64.deb \
-  && apt-get install -f \
-  && rm powershell_7.4.0-1.deb_amd64.deb
-    
 # "#################################################"
 # "GitHub Pages/Jekyll is based on Ruby. Set the version and path"
 # "As of this writing, use Ruby 3.1.2
